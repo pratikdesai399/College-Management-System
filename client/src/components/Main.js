@@ -4,6 +4,7 @@ import Admin from '../components/admin';
 import Student from '../components/student';
 import Teacher from '../components/teacher';
 
+
 export default function Main(){
 
     
@@ -27,7 +28,7 @@ export default function Main(){
                 <h1>YOU ARE NOT LOGGED IN</h1>
             )}
             {role == 'admin' && (
-                <Admin />
+                <Admin role={role} />
             )}
             {role == 'student' && (
                 <Student />

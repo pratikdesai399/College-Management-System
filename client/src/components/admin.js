@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 
 export default function Admin(){
     let history = useHistory();
@@ -11,7 +11,7 @@ export default function Admin(){
             
             if(response){
                 console.log(response);
-                history.push('/registration');
+                history.push('/login');
             }
         })
 
@@ -19,8 +19,10 @@ export default function Admin(){
 
     return(
         <div>
-            <h1>ADMIN</h1>
-            <button onClick={logout}>LOGOUT</button>
+            <Link to="/register">REGISTER STUDENT</Link>
+            <Link onClick={logout}>LOGOUT</Link>
+            {/* <h1>ADMIN</h1>
+            <button onClick={logout}>LOGOUT</button> */}
 
         </div>
     )

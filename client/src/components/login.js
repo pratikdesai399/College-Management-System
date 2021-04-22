@@ -21,12 +21,12 @@ function Login(){
 
     axios.defaults.withCredentials = true;
 
-    const register =()=>{
-        axios.post('http://localhost:5000/register', {username : usernameReg, password: passwordeReg, role: roleReg})
-        .then((response)=>{
-            console.log(response);
-        })
-    }
+    // const register =()=>{
+    //     axios.post('http://localhost:5000/register', {username : usernameReg, password: passwordeReg, role: roleReg})
+    //     .then((response)=>{
+    //         console.log(response);
+    //     })
+    // }
 
     const login=()=>{
         axios.post('http://localhost:5000/login', {username : usernameLog, password: passwordeLog, role: roleLog})
@@ -62,7 +62,7 @@ function Login(){
             <div className="App">
             <header className="App-header">
             <div>
-                <div className='registration'>
+                {/* <div className='registration'>
                 <h1>REGISTRATION</h1>
                 <label>USERNAME : </label>
                 <input type='text' onChange={(e)=>
@@ -74,7 +74,7 @@ function Login(){
                 <label>ROLE : </label>
                 <input onChange={(e)=> setRoleReg(e.target.value)}/><br></br>
                 <button onClick={register}>REGISTER</button>
-            </div>
+            </div> */}
 
 
 
