@@ -1,5 +1,5 @@
 COLLEGE MANAGEMENT SYSTEM
 
-Do npm install in bothe client and server directories
+Do npm install in both client and server directories
 
 
