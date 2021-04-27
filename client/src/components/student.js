@@ -11,7 +11,7 @@ export default function Student(){
             
             if(response){
                 console.log(response);
-                history.push('/registration');
+                history.push('/login');
             }
         })
 

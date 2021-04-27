@@ -51,7 +51,7 @@ function Register(){
     
         return(
             <div>
-                {!role && (
+                {role!= 'admin' && (
                     <h1>YOU ARE NOT AUTHORIZED TO ACCESS THIS PAGE</h1>
                 )}
                 {role == 'admin' && (
