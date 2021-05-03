@@ -1,29 +1,27 @@
 import axios from 'axios';
 import React from 'react';
+import NAVBAR from './Navbar';
 import {useHistory, Link} from 'react-router-dom';
+import SIDENAV from './Sidenav';
+import {Col, Button, Container, Row} from 'react-bootstrap';
+
+
 
 export default function Admin(){
-    let history = useHistory();
-
-    const logout = ()=>{
-        axios.post('http://localhost:5000/logout')
-        .then((response)=>{
-            
-            if(response){
-                console.log(response);
-                history.push('/login');
-            }
-        })
-
-    }
+    
 
     return(
         <div>
-            <Link to="/register">REGISTER STUDENT</Link>
-            <Link onClick={logout}>LOGOUT</Link>
-            {/* <h1>ADMIN</h1>
-            <button onClick={logout}>LOGOUT</button> */}
-
+        <NAVBAR />
+        <Container fluid>
+            <div className="mr-auto mt-3 col-md-3">
+                <Link to="/register"><Button>REGISTER STUDENT</Button></Link>
+            </div>
+            <div className="mr-auto mt-3 col-md-3">
+                <Link to="/users"><Button>LIST ALL USERS</Button></Link>
+            </div>
+        </Container>
         </div>
+        
     )
 }

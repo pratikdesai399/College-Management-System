@@ -5,6 +5,7 @@ import Main from './components/Main';
 import Home from './components/home';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Register from './components/register';
+import USERS from './components/users';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route path='/' exact render={(props)=> <Home />} />
         <Route path='/register' exact render={(props)=> <Register />} />
+        <Route path='/users' exact render={(props)=> <USERS />} />
 
         <Route path='/login' exact render={(props)=> <Login />} />
         <Route path='/main' exact render={(props)=> <Main />} />

@@ -1,3 +1,4 @@
+import { Button } from 'react-bootstrap';
 import React from 'react';
 
 export default function Home(){
@@ -6,7 +7,7 @@ export default function Home(){
             
            
             <h1>HOME</h1>
-            <a href='http://localhost:3000/login'>LOGIN</a><br></br>
+            <a href='http://localhost:3000/login'><Button>LOGIN</Button></a><br></br>
             
 
         

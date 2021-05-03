@@ -67,6 +67,16 @@ app.post('/register', (req, res)=>{
     
 });
 
+app.get('/listUsers',(req,res)=>{
+    var userList = 'SELECT id,username,roles FROM users';
+    db.query(userList, function(err, data, fields){
+        if(err) throw err;
+        //res.render('listUsers', {title:'USER LIST', userData: data});
+        res.send(data);
+    });
+    
+})
+
 app.get('/login', (req, res)=>{
     if(req.session.user){
         res.send({loggedIn : true, user: req.session.user})
